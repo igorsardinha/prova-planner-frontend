@@ -1,0 +1,40 @@
+@import "tailwindcss";
+
+:root {
+	--background: #f8fafc;
+	--foreground: #0f172a;
+}
+
+body {
+	color: var(--foreground);
+	background: var(--background);
+	font-family:
+		ui-sans-serif,
+		system-ui,
+		-apple-system,
+		BlinkMacSystemFont,
+		sans-serif;
+	-webkit-font-smoothing: antialiased;
+}
+
+/* 🧊 Seus "Atalhos" de Estilo Customizados */
+
+.dashboard-card {
+	@apply bg-white p-6 rounded-2xl border border-slate-200/80 shadow-sm transition-all duration-200 hover:shadow-md hover:border-slate-300;
+}
+
+.btn-primary {
+	@apply px-4 py-2 bg-indigo-600 text-white font-medium rounded-xl hover:bg-indigo-700 active:scale-[0.98] transition-all duration-150 shadow-sm shadow-indigo-100 flex items-center justify-center gap-2 disabled:bg-slate-300 disabled:cursor-not-allowed;
+}
+
+.btn-secondary {
+	@apply px-4 py-2 bg-white border border-slate-200 text-slate-700 font-medium rounded-xl hover:bg-slate-50 hover:text-slate-900 active:scale-[0.98] transition-all duration-150 shadow-sm;
+}
+
+.badge {
+	@apply text-xs font-bold px-2.5 py-1 rounded-lg border shrink-0 uppercase tracking-wider;
+}
+
+.animate-pulse-slow {
+	animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
